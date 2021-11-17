@@ -3,5 +3,14 @@
   <p><i class="fas fa-th"></i> <%= @restaurant.category.capitalize %></p>
   <p><i class="fas fa-map-marker-alt"></i> <%= @restaurant.address %></p>
   <p><i class="fas fa-phone"></i> <%= @restaurant.phone_number %></p>
+
+  <h4>Reviews</h4>
+  <%= link_to 'Leave a review', new_restaurant_review_path(@restaurant) %>
+  <ul>
+    <% @restaurant.reviews.each do |review| %>
+      <li><%= review.content %> - <%= review.rating %>/5</li>
+    <% end %>
+  </ul>
+
   <%= link_to 'Back', root_path %>
 </div>
