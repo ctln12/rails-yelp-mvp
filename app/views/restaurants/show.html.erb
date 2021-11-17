@@ -1,0 +1,7 @@
+<div class="container">
+  <h1><%= @restaurant.name %></h1>
+  <p><i class="fas fa-th"></i> <%= @restaurant.category.capitalize %></p>
+  <p><i class="fas fa-map-marker-alt"></i> <%= @restaurant.address %></p>
+  <p><i class="fas fa-phone"></i> <%= @restaurant.phone_number %></p>
+  <%= link_to 'Back', root_path %>
+</div>
